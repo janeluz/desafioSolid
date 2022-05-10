@@ -2,8 +2,8 @@ import { User } from "../../model/User";
 import { IUsersRepository, ICreateUserDTO } from "../IUsersRepository";
 
 class UsersRepository implements IUsersRepository {
+  
   private users: User[];
-
   private static INSTANCE: UsersRepository;
 
   private constructor() {
@@ -43,12 +43,7 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-   Object.assign (receivedUser, {
-     admin:true,
-     updated_at: new Date(),
-   });
-   return receivedUser;
-  } 
+  
 
   list(): User[] {
     return this.users;

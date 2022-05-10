@@ -14,15 +14,16 @@ class User {
   
     updated_at: Date;
   
-    constructor(){
-      if(!this.id){
-        this.id = uuidv4();
+    constructor(id: string){
+        if(!this.id){
+        this.id = uuidV4();
       }
-      if (!this.admin){
+      
         this.admin = false;
       }
+    
     }
-  
-}
+
+  }
 
 export { User };
